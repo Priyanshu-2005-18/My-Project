@@ -5,10 +5,8 @@ import seaborn as sns
 import datetime
 import os
 
-# Set page configuration
 st.set_page_config(page_title="BudgetBuddy", layout="wide")
 
-# Custom CSS for improved styling, accessibility, and logo
 st.markdown(
     """
     <style>
@@ -164,13 +162,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Initialize session state for expenses and transactions
 if 'expenses' not in st.session_state:
     st.session_state.expenses = pd.DataFrame(columns=['Date', 'Category', 'Amount', 'Description'])
 if 'transactions' not in st.session_state:
     st.session_state.transactions = pd.DataFrame(columns=['Date', 'Person', 'Type', 'Amount', 'Description'])
 
-# Function to add an expense
 def add_expense(date, category, amount, description):
     new_expense = pd.DataFrame({
         'Date': [date],
@@ -181,7 +177,6 @@ def add_expense(date, category, amount, description):
     st.session_state.expenses = pd.concat([st.session_state.expenses, new_expense], ignore_index=True)
     st.rerun()
 
-# Function to add a transaction
 def add_transaction(date, person, transaction_type, amount, description):
     new_transaction = pd.DataFrame({
         'Date': [date],
@@ -193,7 +188,6 @@ def add_transaction(date, person, transaction_type, amount, description):
     st.session_state.transactions = pd.concat([st.session_state.transactions, new_transaction], ignore_index=True)
     st.rerun()
 
-# Function to calculate balance for each person
 def calculate_balances(transactions):
     if transactions.empty:
         return pd.DataFrame(columns=['Person', 'Balance'])
@@ -204,25 +198,21 @@ def calculate_balances(transactions):
         amount = row['Amount']
         if row['Type'] == 'Gave':
             person_balances[person] = person_balances.get(person, 0) - amount
-        else:  # Received
+        else:
             person_balances[person] = person_balances.get(person, 0) + amount
     
     balance_df = pd.DataFrame(list(person_balances.items()), columns=['Person', 'Balance'])
     balance_df['Balance'] = balance_df['Balance'].round(2)
     return balance_df
 
-# Function to filter transactions
 def filter_transactions(transactions, search_term=None):
     if search_term:
         search_term = search_term.lower()
         return transactions[transactions.apply(lambda row: search_term in str(row).lower(), axis=1)]
     return transactions
 
-# Streamlit UI
-# Use a relative path for the logo (assumes pic.jpg is in the same directory as the script)
 logo_path = os.path.join(os.path.dirname(__file__), "pic.jpg")
 
-# Use columns to center the logo above the welcome message
 col1, col2, col3 = st.columns([1, 6, 1])
 
 with col2:
@@ -234,13 +224,10 @@ with col2:
         st.warning("Could not find 'pic.jpg' in the script's directory. Using a placeholder image. Place 'pic.jpg' in the same folder as this script.")
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Show welcome message
 st.markdown("<div class='success-message'>Welcome! We're glad you're here to track your expenses and transactions with BudgetBuddy.</div>", unsafe_allow_html=True)
 
-# Tabs for Expenses and Transactions
 tab1, tab2 = st.tabs(["Expenses", "Transactions"])
 
-# Expenses Tab
 with tab1:
     with st.form(key='expense_form', clear_on_submit=True):
         st.markdown("<div class='form-container'>", unsafe_allow_html=True)
@@ -310,7 +297,6 @@ with tab1:
         st.markdown("<div class='success-message'>All expenses cleared in BudgetBuddy!</div>", unsafe_allow_html=True)
         st.rerun()
 
-# Transactions Tab
 with tab2:
     with st.form(key='transaction_form', clear_on_submit=True):
         st.markdown("<div class='form-container'>", unsafe_allow_html=True)
