@@ -9,10 +9,20 @@ Features
   5.Export Functionality: Download your financial data for offline access or further analysis.
 
 Technologies Used
-  1.Frontend: HTML, CSS, JavaScript
-  2.Backend: Python
-  3.Data Visualization: [Specify libraries used, e.g., Chart.js, D3.js]
-  4.Database: [Specify database used, e.g., SQLite, PostgreSQL]
+  1.Frontend & Framework:
+      Streamlit for interactive web app development
+      HTML/CSS (embedded) for custom styling
+  2.Data Management:
+      Pandas for in-memory data handling (expenses and transactions)
+  3.Data Visualization:
+      Matplotlib and Seaborn for bar and line charts
+  4.Image Processing:
+      Pillow for displaying the app logo (pic.jpg)
+  5.Proposed Database:
+      SQLite for persistent data storage (see Database Integration)
+  Tools:
+      Python 3.8+ for backend logic
+      Git for version control
 
 Getting Started
   Prerequisites
@@ -22,8 +32,19 @@ Installation
   1. Clone the repository:
       git clone https://github.com/Priyanshu-2005-18/My-Project.git
   2. Navigate to the project directory:
-      cd My-Project
-  3. Install the required dependencies:
+      cd BudgetBuddy
+  3. Set up a virtual environment (recommended):
+       python -m venv venv
+       source venv/bin/activate  # On Windows: venv\Scripts\activate
+  4. Install the required dependencies:
       pip install -r requirements.txt
-  4. Run the application:
+  5.Add the logo:
+      Place pic.jpg in the project root directory for the app’s header image.
+  6. Run the application:
       streamlit run budgetbuddy.py
+📂 Project Structure
+My-Project/
+├── budgetbuddy.py         # Main Streamlit app
+├── data/                  # Folder to store data files
+├── requirements.txt       # List of required Python packages
+└── README.md     
