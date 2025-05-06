@@ -42,7 +42,10 @@ Installation
       Place pic.jpg in the project root directory for the app’s header image.
   6. Run the application:
       streamlit run budgetbuddy.py
-📂 Project Structure
+
+
+
+Project Structure
 My-Project/
 ├── budgetbuddy.py         # Main Streamlit app
 ├── data/                  # Folder to store data files
