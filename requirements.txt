@@ -1,0 +1,6 @@
+# Requirements for BudgetBuddy Streamlit app
+streamlit==1.30.0  # Web app framework for UI
+pandas==1.5.3      # Data management for expenses and transactions
+matplotlib==3.5.1  # Plotting for visualizations
+seaborn==0.12.2    # Enhanced visualizations
+Pillow==9.0.0      # Image processing for logo display
