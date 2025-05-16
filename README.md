@@ -1,53 +1,100 @@
-# Expense/ Transaction Tracker
-A user-friendly web application designed to help individuals manage their finances by tracking expenses and peer-to-peer transactions. It offers visualizations, balance summaries, an accessible UI, and export features to provide a comprehensive financial overview.
+Budget Buddy - Expense Tracking Tool
 
-Features
-  1. Expense Tracking: Record and categorize your daily expenses effortlessly.
-  2.Peer-to-Peer Transactions: Log and monitor transactions between individuals.
-  3.Visualizations: Gain insights through charts and graphs representing your financial data.
-  4.Balance Summaries: View summaries of your financial status at a glance.
-  5.Export Functionality: Download your financial data for offline access or further analysis.
+Budget Buddy is a user-friendly, secure, and interactive web application designed to help individuals track their daily expenses and manage personal transactions with others. Built using Python and Streamlit, it features authentication, dynamic visualizations, and CSV export functionalities to make budgeting smarter and simpler.
 
-Technologies Used
-  1.Frontend & Framework:
-      Streamlit for interactive web app development
-      HTML/CSS (embedded) for custom styling
-  2.Data Management:
-      Pandas for in-memory data handling (expenses and transactions)
-  3.Data Visualization:
-      Matplotlib and Seaborn for bar and line charts
-  4.Image Processing:
-      Pillow for displaying the app logo (pic.jpg)
-  5.Proposed Database:
-      SQLite for persistent data storage (see Database Integration)
-  Tools:
-      Python 3.8+ for backend logic
-      Git for version control
+👨‍💻 Project Members
+Priyanshu
+Eesha 
 
-Getting Started
-  Prerequisites
-  Python 3.x installed on your machine.
+🚀 Features
+✅ User Authentication
+✅ Expense Logging and Categorization
+✅ Transaction Management (Gave/Received)
+✅ Data Visualizations (Bar, Line, Pie Charts)
+✅ Balance Summary with People
+✅ Search, Delete, and Export Options
+✅ Responsive UI with Custom Styling
 
-Installation
-  1. Clone the repository:
-      git clone https://github.com/Priyanshu-2005-18/My-Project.git
-  2. Navigate to the project directory:
-      cd BudgetBuddy
-  3. Set up a virtual environment (recommended):
-       python -m venv venv
-       source venv/bin/activate  # On Windows: venv\Scripts\activate
-  4. Install the required dependencies:
-      pip install -r requirements.txt
-  5.Add the logo:
-      Place pic.jpg in the project root directory for the app’s header image.
-  6. Run the application:
-      streamlit run budgetbuddy.py
+🛠️ Technologies Used
+Frontend/UI: Streamlit
+
+Database: SQLite
+
+Languages: Python
+
+Libraries:
+
+pandas
+
+matplotlib
+
+seaborn
+
+bcrypt
+
+sqlite3
+
+re
+
+datetime
+
+📸 Screenshots
+![image](https://github.com/user-attachments/assets/02846bd2-ac05-41a4-be10-7c9b20a834d6)
+
+![image](https://github.com/user-attachments/assets/a0518aec-a53f-41dc-adc2-bd1436339f8a)
 
 
 
-Project Structure
-My-Project/
-├── budgetbuddy.py         # Main Streamlit app
-├── data/                  # Folder to store data files
-├── requirements.txt       # List of required Python packages
-└── README.md     
+🔧 Setup Instructions
+Clone the Repository
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/budget-buddy.git
+cd budget-buddy
+Install Dependencies
+
+bash
+Copy
+Edit
+pip install streamlit pandas matplotlib seaborn bcrypt
+Add Logo Image
+
+Make sure the image file pic.jpg is in the same directory as project.py.
+
+Run the App
+
+bash
+Copy
+Edit
+streamlit run project.py
+🔐 Security Features
+Secure password hashing using bcrypt.
+
+Email format validation and error handling.
+
+User-specific data storage and retrieval.
+
+📁 File Structure
+bash
+Copy
+Edit
+📦budget-buddy
+ ┣ 📄project.py        # Main Streamlit app
+ ┣ 📄pic.jpg           # Logo image
+ ┗ 📄budgetbuddy.db    # Auto-generated database (created on first run)
+📌 Future Improvements
+Add monthly/weekly budgeting goals.
+
+Enable data sync via cloud/database.
+
+Add mobile responsiveness.
+
+Generate spending reports.
+
+🧠 Inspiration
+This project was developed as a collaborative effort between two students to simplify expense tracking using modern Python tools. Inspired by the need for intuitive, visual, and secure financial tools tailored to students and individuals.
+
+📝 License
+This project is open-source and available under the MIT License.
