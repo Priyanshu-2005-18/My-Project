@@ -10,7 +10,7 @@
 ## 👨‍💻 Project Members
 
 - Priyanshu  
-- [Teammate Name] *(replace with actual name)*
+- Eesha
 
 ---
 
@@ -44,7 +44,9 @@
 
 ## 📸 Screenshots
 
-> 📍 Dashboard, Login, Expense Visuals, and Transaction History included with a custom logo.
+> ![Screenshot 2025-05-16 215541](https://github.com/user-attachments/assets/5fa0bae7-5fd2-4e0c-a465-d347e2de570d)
+> ![Screenshot 2025-05-16 215700](https://github.com/user-attachments/assets/9ba37903-9407-4567-93e8-092bee138b3a)
+
 
 ---
 
